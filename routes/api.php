@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\SkincareController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -32,6 +33,7 @@ Route::get('/tasks/{id}', [TaskController::class, 'show']);
 Route::put('/tasks/{id}', [TaskController::class, 'update']);
 Route::patch('/tasks/{id}', [TaskController::class, 'update']);
 Route::delete('/tasks/{id}', [TaskController::class, 'destroy']);
+Route::apiResource('skincare', SkincareController::class);
 
 // Tugas Harian: Route Profil
 Route::get('/profil', function () {
