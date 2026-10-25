@@ -34,6 +34,7 @@ Route::put('/tasks/{id}', [TaskController::class, 'update']);
 Route::patch('/tasks/{id}', [TaskController::class, 'update']);
 Route::delete('/tasks/{id}', [TaskController::class, 'destroy']);
 Route::apiResource('skincare', SkincareController::class);
+Route::patch('/skincare/{skincare}', [SkincareController::class, 'update']);
 
 // Tugas Harian: Route Profil
 Route::get('/profil', function () {
